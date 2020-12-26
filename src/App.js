@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "./components/Header";
+import Overview from "./components/Overview";
+import Background from "./components/Background";
+import MediaFollowers from "./components/MediaFollowers";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="global-container">
+      <div
+        className={`relative block overflow-auto bg-lightMode-background-rest dark:bg-darkMode-background-rest lg:static`}
+      >
+        <Background />
+        <div className="px-8 py-10 h-auto sm:px-40 z-20">
+          <Header followers={"23,004"} />
+          <MediaFollowers />
+          <Overview />
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
