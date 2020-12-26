@@ -26,6 +26,8 @@
     "start:react": "craco start",
     "prebuild": "run-s build:tailwind",
     "build": "craco build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "craco test",
     "eject": "react-scripts eject"
   },
