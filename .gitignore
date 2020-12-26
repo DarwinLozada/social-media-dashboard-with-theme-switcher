@@ -9,6 +9,7 @@
 /.pnp
 .pnp.js
 .eslintcache
+tailwind.output.css
 
 # testing
 /coverage
