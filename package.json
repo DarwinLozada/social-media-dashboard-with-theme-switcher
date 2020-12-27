@@ -2,7 +2,7 @@
   "name": "social-media-dashboard-with-theme-switcher",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://darwinlozada.github.io/social-media-dashboard-with-theme-switcher",
+  "homepage": ".",
   "dependencies": {
     "@craco/craco": "^6.0.0",
     "@headlessui/react": "^0.2.0",
