@@ -21,11 +21,8 @@ const FollowersBox = (props) => {
         <h3 className="tracking-followersSpacing mt-2 text-sm text-lightMode-lightText dark:text-darkMode-lightText">
           {props.typeOfFollowers}
         </h3>
-        <div
-          className={`flex flex-row items-center text-sm mt-8 text-uiColors-${
-            props.change === "positive" ? "positive" : "negative"
-          }Rating font-bold`}
-        >
+
+        <div className={`flex flex-row items-center text-sm mt-8`}>
           <img
             className="w-3 h-2 mr-2"
             src={
@@ -35,7 +32,16 @@ const FollowersBox = (props) => {
             }
             alt="change-icon"
           ></img>
-          <p>{props.difference} Today</p>
+          {/* I don't know why, but when I run the build this 'text-uiColors-${props.change}Rating' doesn't work, so I figured out this approach, is not he best one, but it works */}
+          {props.change === "positive" ? (
+            <p className={`text-uiColors-positiveRating font-bold`}>
+              {props.difference} Today
+            </p>
+          ) : (
+            <p className={`text-uiColors-negativeRating font-bold`}>
+              {props.difference} Today
+            </p>
+          )}
         </div>
       </div>
     </div>
