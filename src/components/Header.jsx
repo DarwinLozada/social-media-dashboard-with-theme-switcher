@@ -18,16 +18,18 @@ const Header = (props) => {
         <h1 className="font-bold text-3xl dark:text-darkMode-primaryText">
           Social Media Dashboard
         </h1>
-        <h3 className="font-bold text-lightMode-toggle-defaultBg mb-8 mt-2 dark:text-darkMode-lightText">
+        <h3 className="font-bold text-lightMode-lightText mb-8 mt-2 dark:text-darkMode-lightText">
           Total followers {props.followers}
         </h3>
       </div>
       <div className="flex w-full justify-between font-bold pt-6 lg:justify-end">
-        <h3 className=" dark:text-darkMode-lightText mr-4">Dark Mode</h3>
+        <h3 className="text-lightMode-lightText dark:text-darkMode-lightText mr-4">
+          Dark Mode
+        </h3>
         <Switch
           checked={switchValue}
           onChange={handleThemeChange}
-          className={`flex p-0.5 h-6 w-11 rounded-full bg-gradient-to-r bg-toggle-defaultBg focus:outline-none cursor-pointer dark:from-toggle-hover-first to-toggle-hover-second`}
+          className={`flex p-0.5 h-6 w-11 rounded-full bg-gradient-to-r bg-toggle-defaultBg focus:outline-none cursor-pointer hover:from-toggle-hover-first hover:to-toggle-hover-second dark:from-toggle-hover-first to-toggle-hover-second`}
         >
           <span
             className={`${
